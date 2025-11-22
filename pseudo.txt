@@ -1,0 +1,15 @@
+y
+d
+0 sub 1
+x
+2
+3 pow 4
+a
+6 mul 5
+b
+7 add 8
+2 tdv 3
+3 mul 9
+c
+11 add 12
+10 eql 13
