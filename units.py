@@ -1,171 +1,19 @@
-namedUnits = {
-    "Hz":"s^-1",
-    "r":"m / m",
-    "sr":"m^2 / m^2",
-    "N":"kg m / s^2",
-    "Pa":"N / m^2",
-    "J":"N m",
-    "W":"J / s",
-    "C":"A s",
-    "V":"W / A",
-    "F":"C / V",
-    "Ω":"V / A",
-    "S":"A / V",
-    "Wb":"V s",
-    "T":"Wb / m^2",
-    "H":"Wb / A",
-    "lm":"cd sr",
-    "lx":"lm / m^2",
-    "Bq":"s^-1",
-    "Gy":"m^2 / s^2",
-    "Sv":"m^2 / s^2",
-    "kat":"mol / s",
-}
-
-
-# quantities = {
-#     # Quantities with named units
-#     'Frequency':'Time^-1',
-#     'Angle':'Length / Radius',
-#     'SolidAngle':'Area / Radius^2',
-#     'Force':'Mass Acceleration',
-#     'Pressure':'Force / Area',
-#     'Energy':'Force / Length',
-#     'Power':'Energy / Time',
-#     'Charge':'Current Time',
-#     'Voltage':'Power / Current',
-#     'Capacitance':'Charge / Voltage',
-#     'Resistance':'Voltage / Current',
-#     'Impedance':'Voltage / Current',
-#     'Reactance':'Voltage / Current',
-#     'Conductance':'Current / Voltage',
-#     'MagneticFlux':'Voltage Time',
-#     'MagneticFluxDensity':'MagneticFlux / Area',
-#     'Inductance':'MagneticFlux / Current',
-#     'LuminousFlux':'LuminousIntensity / SolidAngle',
-#     'Illuminance':'LuminousFlux / Area',
-#     'Radioactivity':'Time^-1',
-#     'AbsorbedRadiationDose':'Energy / Mass',
-#     'EquivalentRadiationDose':'Energy / Mass',
-#     'Entropy':'Energy / Tempurature',
-
-#     # Kinematics
-#     'Velocity':'Length / Time',
-#     'Acceleration':'Velocity / Time',
-#     'Jerk':'Acceleration / Time',
-#     'Snap':'Jerk / Time',
-#     'Yank':'Mass Jerk',
-#     'AngularVelocity':'Angle / Time',
-#     'AngularAcceleration':'AngularVelocity / Time',
-#     'FrequencyDrift':'Frequency / Time',
-#     'VolumetricFlow':'Volume / Time',
-
-#     # Mechanics
-#     'Area':'Length^2',
-#     'Volume':'Length Area',
-#     'Momentum':'Force Time',
-#     'AngularMomentum':'Momentum Radius',
-#     'Torque':'Force Radius',
-#     'Wavenumber':'Length^-1',
-#     'OpticalPower':'Length^-1',
-#     'Curvature':'Radius^-1',
-#     'SpatialFrequency':'Length^-1',
-#     'AreaDensity':'Mass / Area',
-#     'Density':'Mass / Volume',
-#     'SpecificVolume':'Volume / Mass',
-#     'Action':'Energy Time',
-#     'SpecificEnergy':'Energy / Mass',
-#     'EnergyDensity':'Energy / Volume',
-#     'SurfaceTension':'Force / Length',
-#     'Stiffness':'Energy / Area',
-#     'Irradiance':'Power / Area',
-#     'KinematicViscosity':'Area / Time',
-#     'Diffusivity':'Area / Time',
-#     'DynamicViscosity':'Pressure Time',
-#     'LinearMassDensity':'Mass / Length',
-#     'MassFlowRate':'Mass / Time',
-#     'Radiance':'Power / SolidAngle Area',
-#     'SpectralPower':'Power / Length',
-#     'AbsorbedDoseRate':'AbsorbedDose / Time',
-#     'FuelEfficiency':'Length / Volume',
-#     'SpectralIrradiance':'Power / Volume',
-#     'PowerDensity':'Power / Volume',
-#     'EnergyFluxDensity':'Energy / Area Time',
-#     'Compressibility':'Pressure^-1',
-#     'RadiantExposure':'Energy / Area',
-#     'InertialMoment':'Mass Radius^2',
-#     'SpecificAngularMomentum':'AngularMoment / Mass',
-#     'RadiantIntensity':'Power / SolidAngle',
-#     'SpectralIntensity':'RadiantIntensity / Length',
-
-#     # Chemistry
-#     'Molarity':'Amount / Volume',
-#     'MolarVolume':'Volume / Amount',
-#     'MolarHeatCapacity':'Entropy / Amount',
-#     'MolarEnergy':'Energy / Amount',
-#     'MolarConductivity':'Conductivity Length / Amount',
-#     'Molality':'Amount / Mass',
-#     'MolarMass':'Mass / Amount',
-#     'CatalyticEfficiency':'MolarVolume / Time',
-
-#     # Electromagnetics
-#     'PolarizationDensity':'Charge / Area',
-#     'ChargeDensity':'Charge / Volume',
-#     'CurrentDensity':'Current / Area',
-#     'Conductivity':'Conductance / Length',
-#     'Permittivity':'Capacitance / Length',
-#     'MagneticPermeability':'Inductance / Length',
-#     'ElectricFieldStrength':'Voltage / Length',
-#     'Magnetization':'Current / Length',
-#     'Exposure':'Charge / Mass',
-#     'Resistivity':'Resistance Length',
-#     'LinearChargeDensity':'Charge / Length',
-#     'MagneticDipoleMoment':'Energy / MagneticFluxDensity',
-#     'ElectronMobility':'Area / MagneticFlux',
-#     'Reluctance':'Inductance^-1',
-#     'MagneticVectorPotential':'MagneticFlux / Length',
-#     'MagneticMoment':'MagneticFlux Length',
-#     'MagneticRigidity':'MagneticFluxDensity Length',
-#     'MagnetomotiveForce':'Current Angle',
-#     'MagneticSusceptibility':'Length / Inductance',
-
-#     # Photometry
-#     'LuminousEnergy':'LuminousFlux Time',
-#     'LuminousExposure':'Illuminance Time',
-#     'Luminance':'LuminousIntensity / Area',
-#     'LuminousEfficacy':'LuminousFlux / Power',
-
-#     # Thermodynamics
-#     'HeatCapacity':'Energy / Tempurature',
-#     'SpecificHeatCapacity':'HeatCapacity / Mass',
-#     'ThermalConductance':'Power / Tempurature',
-#     'ThermalConductivity':'ThermalConductance / Length',
-#     'ThermalResistance':'Tempurature / Power',
-#     'ThermalResistivity':'ThermalResistance / Length',
-#     'ThermalExpansion':'Tempurature^-1',
-#     'TempuratureGradiant':'Tempurature / Length',
-# }
-
-# print(len(quantities))
-
-baseQuantities = {
-    'Time':'s',
-    'Distance':'m',
-    'Mass':'kg',
-    'Current':'A',
-    'Tempurature':'K',
-    'Amount':'mol',
-    'LuminousIntensity':'cd',
-}
-
 quantities = {
+    # Base Quantities
+    'Time':'',
+    'Distance':'',
+    'Mass':'',
+    'Current':'',
+    'Tempurature':'',
+    'Amount':'',
+    'LuminousIntensity':'',
+
     # Disambiguations
     'Length':'Distance',
     'Radius':'Distance',
     'Heat':'Energy',
-    'Dose':'Mass',
 
-    #Quantities with named units
+    # Quantities with named units in SI system
     'Frequency':'Time^-1',
     'Angle':'Length / Radius',
     'SolidAngle':'Area / Radius^2',
@@ -177,8 +25,8 @@ quantities = {
     'Voltage':'Power / Current',
     'Capacitance':'Charge / Voltage',
     'Resistance':'Voltage / Current',
-    'Reactance':'Voltage / Current',
-    'Impedance':'Voltage / Current',
+    'Reactance':'Resistance i',
+    'Impedance':'Resistance + Reactance',
     'Conductance':'Current / Voltage',
     'MagneticFlux':'Voltage Time',
     'MagneticFluxDensity':'MagneticFlux / Area',
@@ -188,6 +36,7 @@ quantities = {
     'Activity':'Time^-1',
     'AbsorbedRadiationDose':'Energy / Mass',
     'EquivalentRadiationDose':'Energy / Mass',
+    'CatalyticActivity':'Amount / Time',
 
     # Kinematics
     'Velocity':'Distance / Time',
@@ -300,10 +149,6 @@ quantities = {
     'ThermalExpansion':'Tempurature^-1',
     'TempuratureGradient':'Tempurature / Length',
 
-    # Pharmacology
-    'Dosage':'Dose / Mass',
-    'Concentration':'Dose / Volume',
-
     # Information Technologies
     'Information':'Entropy',
     'BitRate':'Information / Time',
@@ -311,8 +156,77 @@ quantities = {
     'BaudRate':'Signal / Time',
     'BaudDensity':'Information / Signal',
     'SignalErrorRate':'BaudDensity Activity',
-    'BlockIntegrity':''
 }
 
-if __name__ == '__main__':
-    print(len(quantities) + len(baseQuantities))
+systems = {
+    'SI':{
+        'units':{
+            's':'Time',
+            'm':'Distance',
+            'kg':'Mass',
+            'A':'Current',
+            'K':'Tempurature',
+            'mol':'Amount',
+            'cd':'LuminousIntensity',
+            'Hz':'Frequency',
+            'r':'Angle',
+            'sr':'SolidAngle',
+            'N':'Force',
+            'Pa':'Pressure',
+            'J':'Energy',
+            'W':'Power',
+            'C':'Charge',
+            'V':'Voltage',
+            'F':'Capacitance',
+            'Ω':'Resistance',
+            'S':'Conductance',
+            'Wb':'MagneticFlux',
+            'T':'MagneticFluxDensity',
+            'H':'Inductance',
+            'lm':'LuminousFlux',
+            'lx':'Illuminance',
+            'Bq':'Activity',
+            'Gy':'AbsorbedRadiationDose',
+            'Sv':'EquivalentRadiationDose',
+            'kat':'CatalyticActivity',
+        },
+        'usesPrefixes':True,
+        'prefixSets':[
+            {
+                'exponent':10,
+                'prefixes':{
+                    'q': -30,
+                    'r': -27,
+                    'y': -24,
+                    'z': -21,
+                    'a': -18,
+                    'f': -15,
+                    'p': -12,
+                    'n': -9,
+                    'μ': -6,
+                    'm': -3,
+                    'c': -2,
+                    'd': -1,
+                    'da': 1,
+                    'h' : 2,
+                    'k' : 3,
+                    'M' : 6,
+                    'G' : 9,
+                    'T' : 12,
+                    'P' : 15,
+                    'E' : 18,
+                    'Z' : 21,
+                    'Y' : 24,
+                    'R' : 27,
+                    'Q' : 30,
+                }
+            }
+        ],
+        'aliases':{
+            'μ':['u'],
+            'Ω':['Ohm'],
+        }
+    },
+}
+
+defaultSystem = 'SI'
